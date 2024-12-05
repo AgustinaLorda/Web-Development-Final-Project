@@ -1,0 +1,238 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Theme Variables */
+:root {
+  --bg-color: #f8f9fa; 
+  --text-color: #343a40; 
+  --primary-color: #161cc6; 
+  --secondary-color: #1f99bb; 
+  --accent-color: #5b5e5e; 
+}
+
+.dark-theme {
+  --bg-color: #2b2b2b; 
+  --text-color: #e0e0e0; 
+  --primary-color: #1f99bb;
+  --secondary-color: #161cc6; 
+  --accent-color: #0f92ba; 
+}
+
+/* Header Styles */
+header {
+  background: var(--primary-color);
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+header:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--secondary-color);
+  transform: scale(1.1);
+}
+
+/* Section Styles */
+section {
+  padding: 40px 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-10px);
+}
+
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+
+h1:hover, h2:hover {
+  color: var(--secondary-color);
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Project Section */
+.project-card {
+  border: 2px solid var(--accent-color);
+  padding: 15px;
+  margin: 15px;
+  border-radius: 8px;
+  background-color: var(--bg-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Skills Section */
+.skills-chart {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.skill {
+  width: 20%;
+  background: var(--accent-color);
+  padding: 15px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.skill:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-5px);
+}
+
+/* Experience Timeline Styles */
+#experience {
+  background-color: var(--bg-color);
+  padding: 50px 20px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: var(--primary-color);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+}
+
+.timeline-item {
+  padding: 20px 0;
+  position: relative;
+  width: 50%;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-content {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-year {
+  position: absolute;
+  top: -15px;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.timeline-item:nth-child(even) .timeline-year {
+  right: -70px;
+}
+
+.timeline-item:nth-child(odd) .timeline-year {
+  left: -70px;
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Contact Form */
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  margin: 10px 0;
+  padding: 12px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px var(--primary-color);
+}
+
+button {
+  padding: 12px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background: var(--secondary-color);
+  transform: scale(1.05);
+}
