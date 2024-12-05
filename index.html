@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio</title>
+  <link rel="stylesheet" href="design.css">
+</head>
+<body>
+  <header id="home">
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="theme-toggle">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Home/About Section -->
+    <section id="about">
+      <h1 class="typing-effect">Hello, I'm Agustina Lorda!</h1>
+      <p>A passionate computer science student and web developer.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project-filter">
+        <button class="filter-btn" data-category="all">All</button>
+        <button class="filter-btn" data-category="web">Cybersecurity</button>
+        <button class="filter-btn" data-category="python">Data Science</button>
+      </div>
+      <div class="project-container">
+        <div class="project-card" data-category="web">
+          <h3>ColorSense Ring</h3>
+          <p>I developed the ColorSense Ring, an innovative IoT device designed to assist individuals with vision impairments and color blindness in identifying clothing colors and detecting stains, enabling greater independence in daily decision-making.</p>
+        </div>
+        <div class="project-card" data-category="python">
+          <h3>Environmental Contamination</h3>
+          <p>For my internship, I conducted research focused on finding effective solutions for environmental contamination. My work explored innovative methods like phytoremediation with sunflowers, Floating Treatment Wetlands, and urban green infrastructure to address pollution and promote sustainability.</p>
+          <p>Technology Used: Python</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-chart">
+        <div class="skill" data-skill="HTML">HTML</div>
+        <div class="skill" data-skill="CSS">CSS</div>
+        <div class="skill" data-skill="JavaScript">JavaScript</div>
+        <div class="skill" data-skill="Python">Python</div>
+        <div class="skill" data-skill="Data Structures & Algorithms">DSA</div>
+        <div class="skill" data-skill="Animation">Animation</div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+      <h2>Education & Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item" data-year="2020">
+          <div class="timeline-content">
+            <h3>Graduate from High School</h3>
+            <p>I graduated from High School at Juan XXIII</p>
+            <span class="timeline-year">2020</span>
+          </div>
+        </div>
+        <div class="timeline-item" data-year="2022">
+          <div class="timeline-content">
+            <h3>Computer Science Student</h3>
+            <p>Began college studies in Computer Science at Lincoln University</p>
+            <span class="timeline-year">2022</span>
+          </div>
+        </div>
+        <div class="timeline-item" data-year="2023">
+          <div class="timeline-content">
+            <h3>Math Learning Center</h3>
+            <p>Started working as a Math tutor at the Math Learning Center</p>
+            <span class="timeline-year">2023</span>
+          </div>
+        </div>
+        <div class="timeline-item" data-year="2024">
+          <div class="timeline-content">
+            <h3>Data Science Internship</h3>
+            <p>Completed an internship in Data Science, focusing on environmental research and sustainability solutions</p>
+            <span class="timeline-year">2024</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <form id="contact-form">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 Agustina Lorda. All Rights Reserved.</p>
+  </footer>
+
+  <script src="javascript.js"></script>
+</body>
+</html>
